@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>摄控查询</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="../css/aui/aui.2.0.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/schedule/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="../plugin/calendar/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../plugin/calendar/css/calendar.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/schedule/paikong.css" />
+</head>
+
+<body>
+
+    <div class="head">
+        <h2 id="today_show"></h2>
+        <a class="show-hide" data-state="hide" id="showorhide" href="#">日历</a>
+    </div>
+
+    <div class="wrap">
+        <ul class="week-f">
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li class="wk">六</li>
+            <li class="wk">日</li>
+        </ul>
+
+        <div id="min_calendar" class="cal-wrap">
+            <ul class="day">
+                <li class="week week-1"><i>1</i></li>
+                <li class="week week-2"><i>2</i></li>
+                <li class="week week-3"><i>3</i></li>
+                <li class="week week-4"><i>4</i></li>
+                <li class="week week-5"><i>5</i></li>
+                <li class="week week-6"><i>6</i></li>
+                <li class="week week-0"><i>7</i></li>
+            </ul>
+        </div>
+
+        <div class="animated fadeInDown" id="calendar"></div>
+
+        <!-- <p style="display: none;" class="hide-calendar">
+            <a style="margin-right: 35px;" id="prevMonth"> 上翻 </a>
+            <a id="hide_calendar" href="javascript:void(0)">收起日历</a>
+            <a style="margin-left: 35px;" id="nextMonth"> 下翻 </a>
+        </p> -->
+
+    </div>
+
+    <p class="tab-container">
+        <a data-type="no" class="tab-btn btn-select" href="javascript:void(0)">待排期人员</a>
+        <a data-type="yes" class="tab-btn" href="javascript:void(0)">已排期人员</a>
+    </p>
+
+    <p class="tab-title">
+        <a class="title" href="javascript:void(0)">摄影师</a>
+        <a class="title" href="javascript:void(0)">化妆师</a>
+    </p>
+
+    <div id="listContainer" style="margin-bottom: 50px;" class="man-list">
+    </div>
+    <script id="temp_list" type="text/html">
+
+        <div class="man-info">
+            {{each list as item }}
+                {{if item.type == 0}}
+                    <p class="user">
+                        {{if item.avatar != ""}}
+                            <img class="user-icon" src="{{item.avatar}}">
+                        {{else}}
+                            <img class="user-icon" src="../plugin/calendar/images/none.png">
+                        {{/if}}
+                        <span class="name">{{item.staffname}}</span>
+                    </p>
+                {{/if}}
+            {{/each}}
+        </div>
+        <div class="man-info">
+            {{each list as item }}
+                {{if item.type == 1}}
+                    <p class="user">
+                        {{if item.avatar != ""}}
+                            <img class="user-icon" src="{{item.avatar}}">
+                        {{else}}
+                            <img class="user-icon" src="../plugin/calendar/images/none.png">
+                        {{/if}}
+                        <span class="name">{{item.staffname}}</span>
+                    </p>
+                {{/if}}
+            {{/each}}
+        </div>
+    </script>
+
+    <footer class="aui-bar aui-bar-tab" id="footer">
+        <div id="main_page" class="aui-bar-tab-item" tapmode>
+            <img src="../image/index1.png">
+            <div class="aui-bar-tab-label">行程管理</div>
+        </div>
+        <div class="aui-bar-tab-item aui-active" tapmode>
+            <img src="../image/kong1.png">
+            <div class="aui-bar-tab-label">摄控查询</div>
+        </div>
+        <div id="btn_add" class="aui-bar-tab-item" tapmode>
+            <img src="../image/add1.png">
+            <div class="aui-bar-tab-label">新建</div>
+        </div>
+        <div id="meihun_pay" class="aui-bar-tab-item" tapmode>
+            <img src="../image/pay.png">
+            <div class="aui-bar-tab-label">美婚PAY</div>
+        </div>
+        <div id="photo_share" class="aui-bar-tab-item" tapmode>
+            <img src="../image/share.png">
+            <div class="aui-bar-tab-label">相册分享</div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../script/aui/api.js"></script>
+
+    <script type="text/javascript" src="../script/arttemplate/template.js"></script>
+
+    <script src="../plugin/calendar/jqmobi.js"></script>
+    <script src="../plugin/calendar/calendar.js"></script>
+
+    <script type="text/javascript" src="../script/constants.js"></script>
+    <script type="text/javascript" src="../script/localStorageOpt.js"></script>
+    <script type="text/javascript" src="../script/utils.js"></script>
+
+    <script type="text/javascript" src="../script/schedule/calendar.js"></script>
+
+</body>
+
+</html>

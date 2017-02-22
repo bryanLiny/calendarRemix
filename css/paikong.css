@@ -1,0 +1,131 @@
+body {
+    background-color: #fff;
+}
+
+.cal-wrap {
+    border-bottom: 1px solid #eee;
+}
+
+.cal-wrap:last-child{
+    margin-bottom: 50px;
+}
+
+ul.week-f {
+    background-color: #fff;
+}
+
+.cal-wrap ul.day li.jr {
+    color: #ff639c;
+}
+
+.cal-wrap ul.day li.cur {
+    background-color: #ff639c;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+#min_calendar li.cur{
+    background-color: #fff;
+
+}
+
+#min_calendar ul.day li.cur i{
+    background-color: red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.head {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.tab-container {
+    border-top: 1px solid #eee;
+    margin-top: 68px;
+    background-color: #fff;
+    color: #999;
+    line-height: 35px;
+}
+
+.tab-container .tab-btn {
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+}
+
+.tab-container .btn-select {
+    color: #ff639c;
+    border-bottom: 1px solid #ff639c;
+}
+
+.tab-title {
+    background-color: #eee;
+    line-height: 30px;
+}
+
+.tab-title .title {
+    width: 49%;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+}
+
+.man-list .man-info {
+    width: 49%;
+    display: inline-block;
+}
+
+.man-info .user-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.man-info .user {
+    padding: 5px 15px;
+    position: relative;
+}
+
+.man-info .name {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+}
+
+.show-hide {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+
+.hide-calendar {
+    text-align: center;
+    line-height: 35px;
+    margin-top: 70px;
+}
+
+.prev-Month {
+    position: fixed;
+    top: 85px;
+    left: 70px;
+}
+
+.next-Month {
+    position: fixed;
+    top: 85px;
+    right: 70px;
+}
+
+.focus {
+    background: #007aff;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #fff;
+}
